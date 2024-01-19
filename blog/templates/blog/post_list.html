@@ -11,18 +11,16 @@
         <h3>Autor: Szelma</h3>
         <h4>I co dalej?</h4>
     </div>
+
+    {% for post in posts%}
     <div>
-        <p>To jest akapit</p>
-        <em>To jest wyróżniony tekst</em><br>
-        <strong>Pogrubienie</strong><br>
-        <a href="https://github.com/Szelmaa">LINK</a>
+        <p>opublikowany: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
     </div>
+    {% endfor %}
     <div>
-    <ul>
-        <li>Element listy</li>
-        <li>Element listy</li>
-        <li>Element listy</li>
-    </ul>
+
     </div>
 
 </body>
